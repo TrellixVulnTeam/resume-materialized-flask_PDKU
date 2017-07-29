@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 python==3.5.2
+=======
+python-3.5.2
+>>>>>>> master
 click==6.7
 Flask==0.12.2
 itsdangerous==0.24
