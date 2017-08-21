@@ -18,5 +18,10 @@ def render_hometest():
     return render_template('index_testing.html')
 
 
+@app.route('/parallax-test')
+def render_parallax_test():
+    return render_template('parallax-testing.html')
+
+
 if __name__ == "__main__":
     app.run()

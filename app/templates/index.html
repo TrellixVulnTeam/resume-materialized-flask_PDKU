@@ -2,28 +2,15 @@
 <html>
     <head>
         <title>Jack Kenyon Resume</title>
-        <!-- Nav -->
-        <nav class="grey darken-3">
-            <div class="nav-wrapper grey darken-4 animated slideInUp" style="font-family: 'Josefin Sans'", sans-serif;>
-                <a href="#" class="brand-logo center">Jack Kenyon</a>
-                <ul id="nav-mobile" class="left hide-on-med-and-down">
-                    <li><a href="#">Test</a></li>
-                    <li><a href="#">Test2</a></li>
-                </ul>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="#">Test3</a></li>
-                    <li><a href="#">Test4</a></li>
-                </ul>
-            </div>
-        </nav>
         <!-- Imports -->
         <!-- FontAwesome -->
-        <link rel="stylesheet" href="static/extra/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='extra/font-awesome/css/font-awesome.min.css') }}">
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize.css-->
-        <link type="text/css" rel="stylesheet" href="static/css/materialize.min.css" media="screen,projection" />
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/materialize.min.css') }}" media="screen,projection" />
+        <!--<link type="text/css" rel="stylesheet" href="static/css/materialize.min.css" media="screen,projection" />-->
         <!-- Import MaterializeCSS Icons -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!-- Animate.CSS -->
@@ -35,9 +22,25 @@
         <!-- jQuery -->
         <!--Import jQuery before materialize.js-->
         <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
-        <script type="text/javascript" src="static/js/materialize.min.js"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/materialize.min.js') }}"></script>
     </head>
     <body bgcolor="#212121">
+        <header>
+            <!-- Nav -->
+            <nav class="grey darken-3">
+                <div class="nav-wrapper grey darken-4 animated fadeIn" style="font-family: 'Josefin Sans'", sans-serif;>
+                    <a href="#" class="brand-logo center">Jack Kenyon</a>
+                    <ul id="nav-mobile" class="left hide-on-med-and-down">
+                        <li><a href="#">Test</a></li>
+                        <li><a href="#">Test2</a></li>
+                    </ul>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="#">Test3</a></li>
+                        <li><a href="#">Test4</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
         <!-- Social Button -->
         <div class="fixed-action-btn horizontal click-to-toggle">
             <a class="btn-floating btn-large blue-grey darken-1 waves-light hoverable animated bounceInUp">
@@ -51,13 +54,13 @@
             </ul>
         </div>
         <!-- Circular Portrait -->
-        <div class="col s12 m8 offset-m2 l6 offset-l3 hoverable animated slideInUp" style="font-family: 'Josefin Sans'", sans-serif;>
+        <div class="col s12 m8 offset-m2 l6 offset-l3 hoverable animated fadeIn" style="font-family: 'Josefin Sans'", sans-serif;>
             <div class="card-panel grey darken-4 z-depth-1">
                 <div class="card-panel blue-grey darken-2 z-depth-1">
-                    <div class="row valign-wrapper center animated slideInUp">
+                    <div class="row valign-wrapper center animated fadeIn">
                         <div class="row">
                             <div class="col1 s2">
-                                <img src="static/images/jack_pic.jpg" alt="" class="circle responsive-img">
+                                <img src="{{ url_for('static', filename='img/jack_pic.jpg') }}" alt="" class="circle responsive-img">
                                 <!-- notice the "circle" class -->
                             </div>
                         </div>
@@ -80,7 +83,7 @@
         </div>
         <!--</div>-->
         <!-- Card with tabs -->
-        <div class="card grey darken-4 white-text hoverable animated slideInUp" style="font-family: 'Josefin Sans'", sans-serif;>
+        <div class="card grey darken-4 white-text hoverable animated fadeIn" style="font-family: 'Josefin Sans'", sans-serif;>
             <div class="card-panel grey darken-4 z-depth-1">
                 <div class="card-tabs grey darken-4 white-text">
                     <ul class="tabs tabs-fixed-width blue-grey darken-3 white-text">
@@ -106,9 +109,9 @@
                     <div id="resume-image">
                         <div class="row">
                             <div class="col2 s12 m7">
-                                <div class="card hoverable valign-wrapper animated fadeInUpBig">
+                                <div class="card hoverable valign-wrapper animated fadeIn">
                                     <div class="card-image">
-                                        <img src="static/images/resume.png" />
+                                        <img src="{{ url_for('static', filename='img/resume.png') }}" />
                                     </div>
                                 </div>
                             </div>
@@ -117,9 +120,9 @@
                     <div id="references-image">
                         <div class="row">
                             <div class="col2 s12 m7">
-                                <div class="card hoverable valign-wrapper animated fadeInUpBig">
+                                <div class="card hoverable valign-wrapper animated fadeIn">
                                     <div class="card-image">
-                                        <img src="static/images/references.png" />
+                                        <img src="{{ url_for('static', filename='img/references.png') }}" />
                                     </div>
                                 </div>
                             </div>
@@ -130,20 +133,20 @@
                             <div class="col2 s12 m7">
                                 <div class="card">
                                     <div class="card-image waves-effect waves-block waves-light">
-                                        <img class="activator" src="static/images/avaren-cover.jpg">
+                                        <img class="activator" src="{{ url_for('static', filename='img/avaren-cover.jpg') }}">
                                     </div>
                                     <div class="col2 s12 m7 card-content align-left">
-                                     <div class="fixed-action-btn horizontal click-to-toggle">
-                                                <a class="btn-floating btn-large blue-grey darken-1 waves-light hoverable animated bounceInUp">
-                                                    <i class="large material-icons">share</i>
-                                                </a>
-                                                <ul>
-                                                    <li><a class="btn-floating #0077B5" href="https://www.linkedin.com/in/jackenyon/"><i class="fa fa-linkedin"></i></a></li>
-                                                    <li><a class="btn-floating red" href="mailto:jackenyon@gmail.com"><i class="fa fa-envelope aria-hidden="true""></i></a></li>
-                                                    <li><a class="btn-floating purple" href="https://github.com/redjax"><i class="fa fa-github aria-hidden="true""></i></a></li>
-                                                    <li><a class="btn-floating green darken-1"><i class="material-icons">person_add</i></a></li>
-                                                </ul>
-                                            </div>
+                                        <div class="fixed-action-btn horizontal click-to-toggle">
+                                            <a class="btn-floating btn-large blue-grey darken-1 waves-light hoverable animated bounceInUp">
+                                                <i class="large material-icons">share</i>
+                                            </a>
+                                            <ul>
+                                                <li><a class="btn-floating #0077B5" href="https://www.linkedin.com/in/jackenyon/"><i class="fa fa-linkedin"></i></a></li>
+                                                <li><a class="btn-floating red" href="mailto:jackenyon@gmail.com"><i class="fa fa-envelope aria-hidden="true""></i></a></li>
+                                                <li><a class="btn-floating purple" href="https://github.com/redjax"><i class="fa fa-github aria-hidden="true""></i></a></li>
+                                                <li><a class="btn-floating green darken-1"><i class="material-icons">person_add</i></a></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                     <div class="card-content">
                                         <span class="card-title activator grey-text text-darken-3">My Music<i class="material-icons right">more_vert</i></span>
@@ -152,15 +155,15 @@
                                                 I make Electronic music under the stage name "Avaren." I post all of my music on Soundcloud and my music's website, both linked below (just click the icons!). My music has been featured in various commercials, YouTube channel episodes as background music, and independent games. Check the site for features!
                                             </div>
                                         </p>
-                                            <!--<ul class="horizontal">
-                                                <li>
-                                                    <a class="btn-floating blue-grey darken-2" href="https://www.soundcloud.com/avaren"><i class="fa fa-soundcloud"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a class="btn-floating blue-grey darken-2" href="http://www.avarenmusic.co"><i class="fa fa-globe"></i></a>
-                                                </li>
-                                            </ul>
-                                            -->
+                                        <!--<ul class="horizontal">
+                                            <li>
+                                                <a class="btn-floating blue-grey darken-2" href="https://www.soundcloud.com/avaren"><i class="fa fa-soundcloud"></i></a>
+                                            </li>
+                                            <li>
+                                                <a class="btn-floating blue-grey darken-2" href="http://www.avarenmusic.co"><i class="fa fa-globe"></i></a>
+                                            </li>
+                                        </ul>
+                                        -->
                                     </div>
                                     <div class="card-reveal">
                                         <span class="card-title grey-text text-darken-3">Card Title<i class="material-icons right">close</i></span>
@@ -175,7 +178,7 @@
         </div>
         <!--Import jQuery before materialize.js-->
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script type="text/javascript" src="static/js/materialize.min.js"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/materialize.min.js') }}"></script>
     </body>
     <footer class="page-footer grey darken-4 white-text">
         <div class="footer-copyright">
